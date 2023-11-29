@@ -44,6 +44,7 @@ function deleteTask(button) {
   const listItem = button.closest("li");
   const tasksList = listItem.parentElement;
   tasksList.removeChild(listItem);
+  alert("Item deleted");
 }
 
 function openTodoList() {
@@ -54,3 +55,4 @@ function openTodoList() {
   landingContainer.style.display = 'none';
   todoContainer.style.display = 'block';
 }
+

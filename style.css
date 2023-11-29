@@ -120,7 +120,13 @@ li button.delete:hover {
 
 .landing-container {
   text-align: center;
-  padding: 50px;
+  background-color: transparent;
+      padding: 20px;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column; /* Display child elements in a column */
+      align-items: center; /* Center items horizontally */
+
 }
 
 .todo-container {
@@ -129,14 +135,15 @@ li button.delete:hover {
 
 .speech {
   position: relative;
-  font-size: medium;
+  font-size: x-large;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
       display: inline-block;
       padding: 20px;
+      box-shadow: #060606;
       background-color: #ffffff;
       color: #060606;
       border-radius: 8px;
-      margin-bottom: 100px;
+      margin-bottom: 280px;
 }
 
 
@@ -148,6 +155,7 @@ li button.delete:hover {
   margin-top: -6px;
   border-width: 6px;
   border-style: solid;
+  box-shadow: #060606;
   border-color: transparent transparent transparent #fafafa; /* Adjust border-color for the pointer */
 }
 
