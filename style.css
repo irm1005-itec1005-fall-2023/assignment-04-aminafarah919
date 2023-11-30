@@ -144,7 +144,7 @@ li button.delete:hover {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   display: inline-block;
   padding: 20px;
-  box-shadow: #060606;
+  box-shadow: 0 0 20px rgb(57, 3, 3);
   background-color: #ffffff;
   color: #fa0606;
   border-radius: 8px;
@@ -160,7 +160,6 @@ li button.delete:hover {
   margin-top: -6px;
   border-width: 6px;
   border-style: solid;
-  box-shadow: #060606;
   border-color: transparent transparent transparent #fafafa;
 }
 
