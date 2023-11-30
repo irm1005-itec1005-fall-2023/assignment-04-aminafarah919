@@ -29,13 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
   function completeTask(checkbox) {
     const taskItem = checkbox.parentNode;
     const taskText = taskItem.querySelector('span');
-    taskText.style.textDecoration = checkbox.checked ? 'line-through' : 'none';
   }
 
   function deleteTask(button) {
     const listItem = button.closest("li");
     const tasksList = listItem.parentElement;
     tasksList.removeChild(listItem);
+    alert("Item deleted");
   }
 
   todoForm.addEventListener("submit", addTask);
@@ -55,4 +55,3 @@ function openTodoList() {
   landingContainer.style.display = 'none';
   todoContainer.style.display = 'block';
 }
-
