@@ -49,9 +49,9 @@ function deleteTask(button) {
 
 function openTodoList() {
   // Toggle visibility of the landing and to-do sections
-  const landingContainer = document.querySelector('.landing-container');
+  const speechContainer = document.querySelector('.speech-container');
   const todoContainer = document.getElementById('todoContainer');
 
-  landingContainer.style.display = 'none';
+  speechContainer.style.display = 'none';
   todoContainer.style.display = 'block';
 }

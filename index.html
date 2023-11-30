@@ -12,26 +12,27 @@
 </head>
 
 <body>
-  <div class="landing-container">
+  <div class="speech-container">
     <h1 class="speech"> My god, I'm overwhelmed! I have so many things to do in the city!</h1>
     <button class="todo-button" onclick="openTodoList()">Open To-Do List</button>
   </div>
 
   <div class="todo-container" id="todoContainer">
-  <div class="container">
-    <h2 class="title">TO DO LIST</h2>
-    <div id="newtask">
-      <form id="todoForm">
-        <input type="text" id="taskInput" placeholder="Buy MJ flowers....">
-        <button onclick="addTask()">Add</button>
+    <div class="container">
+      <h2 class="title">TO DO LIST</h2>
+      <div id="newtask">
+        <form id="todoForm">
+          <input type="text" id="taskInput" placeholder="Buy MJ flowers....">
+          <button onclick="addTask()">Add</button>
+        </form>
+      </div>
+
+      <ul id="tasks"> 
+        
+      </ul>
     </div>
-
- 
-
-    <ul id="tasks"></ul>
   </div>
-    
-  </body>
+
 
   <main>
     <!-- If needed, you can add content here -->

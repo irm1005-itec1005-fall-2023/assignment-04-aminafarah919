@@ -123,7 +123,7 @@ li button.delete:hover {
   cursor: pointer;
 }
 
-.landing-container {
+.speech-container {
   text-align: center;
   background-color: transparent;
   padding: 20px;
@@ -186,10 +186,27 @@ li button.delete:hover {
   border: 2px solid #ff0000;
   border-radius: 4px;
   outline: none;
+  position: relative;
   transition: background-color 0.3s ease;
 }
 
 .complete-checkbox:checked {
-  background-color: #f20804;
-  border-color: #ff0000;
+  background-color: #67b3f6;
+  border-color: #f10505;
 }
+
+.complete-checkbox::before {
+  content: '\2713'; /* Unicode checkmark character */
+  font-size: 16px;
+  color: #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.complete-checkbox:checked::before {
+  display: block;
+}
+
