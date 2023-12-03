@@ -1,43 +1,57 @@
-/* Assignment 04: Finishing a Todo List App
- *
- * 
- *
- */
+document.addEventListener("DOMContentLoaded", function () {
+  const todoForm = document.getElementById("newtask");
+  const taskInput = document.getElementById("taskInput");
+  const tasksList = document.getElementById("tasks");
 
-
-//
-// Variables
-//
-
-// Constants
-const appID = "app";
-const headingText = "To do. To done. ✅";
-
-// DOM Elements
-let appContainer = document.getElementById(appID);
-
-//
-// Functions
-//
-
-// Add a heading to the app container
-function inititialise() {
-  // If anything is wrong with the app container then end
-  if (!appContainer) {
-    console.error("Error: Could not find app contianer");
-    return;
+  function createTaskElement(taskText) {
+    const listItem = document.createElement("li");
+    listItem.innerHTML = `
+      <input type="checkbox" class="complete-checkbox" onclick="completeTask(this)">
+      <span>${taskText}</span>
+      <button class="delete" onclick="deleteTask(this)">
+        <img src="trash.png" alt="Delete">
+      </button>
+    `;
+    return listItem;
   }
 
-  // Create an h1 and add it to our app
-  const h1 = document.createElement("h1");
-  h1.innerText = headingText;
-  appContainer.appendChild(h1);
+  function addTask(event) {
+    event.preventDefault();
 
-  // Init complete
-  console.log("App successfully initialised");
+    const taskText = taskInput.value.trim();
+    if (taskText !== "") {
+      const listItem = createTaskElement(taskText);
+      tasksList.appendChild(listItem);
+      taskInput.value = "";
+    }
+  }
+
+  function completeTask(checkbox) {
+    const taskItem = checkbox.parentNode;
+    const taskText = taskItem.querySelector('span');
+  }
+
+  function deleteTask(button) {
+    const listItem = button.closest("li");
+    const tasksList = listItem.parentElement;
+    tasksList.removeChild(listItem);
+    alert("Item deleted");
+  }
+
+  todoForm.addEventListener("submit", addTask);
+});
+function deleteTask(button) {
+  const listItem = button.closest("li");
+  const tasksList = listItem.parentElement;
+  tasksList.removeChild(listItem);
+  alert("Item deleted");
 }
 
-//
-// Inits & Event Listeners
-//
-inititialise();
+function openTodoList() {
+  // Toggle visibility of the landing and to-do sections
+  const speechContainer = document.querySelector('.speech-container');
+  const todoContainer = document.getElementById('todoContainer');
+
+  speechContainer.style.display = 'none';
+  todoContainer.style.display = 'block';
+}
